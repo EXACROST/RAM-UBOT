@@ -31,11 +31,11 @@ DEF_UNAPPROVED_MSG = (
     f"**╭━━━━━━━━━━━━━━━━━╮**\n    🌟SELAMAT DATANG🌟\n"
     "**╰━━━━━━━━━━━━━━━━━╯**\n"
     "▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
-    f"**ANAK KONTOL ANAK NGENTOT,KALO NGECHAT MAJIKAN {DEFAULTUSER} ITU SALAM,\nHABIS ITU SABAR TUNGGU MAJIKAN GUA BALES,\nKALO GA DI BALES - BALES, LU JANGAN NYEPAM KONTOL, KAYA ANAK YATIM MAU MINTA SEMBAKO LU ANJING, APA LAGI LU NGECHAT NYA CUMA MINTA VCS, BISA GUA BLOKIR!! KALO NYEPAM JUGA TAR GUA BLOKIR!!!! TUNGGU SI {DEFAULTUSER} NERIMA PESAN LU**\n"
+    f"**Halo, sabar ya, {DEFAULTUSER} lagi sibuk,\nApa ada yang bisa dibantu?,\nTunggu sampai pesanmu terbalas - BALES, Gak usah spam chat ya, jangan kek jamet!!! Tunggu {DEFAULTUSER} nerima pesanmu !**\n"
     "▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
     "╭✠╼━━━━━━❖━━━━━━━✠╮\n"
     "┣[• 𝐁𝐎𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄\n"
-    "┣[• 𝐁𝐘 ⭐️𝐑𝐀𝐌-𝐔𝐁𝐎𝐓⭐️\n"
+    "┣[• 𝐁𝐘 ɴᴄʜᴀɴ ⸸\n"
     "╰✠╼━━━━━━❖━━━━━━━✠╯")
 # =================================================================
 
@@ -94,7 +94,7 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
-                    "`Bacot bat Jamet tolol, Gua blok ajalah`\n"
+                    "`Gak usah spam, Ku block aja ya`\n"
                     f"`Tunggu {DEFAULTUSER} Bales ya`"
                 )
 
@@ -236,7 +236,7 @@ async def approvepm(apprvpm):
     except IntegrityError:
         return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
 
-    await apprvpm.edit(f"`Baik` [{name0}](tg://user?id={uid}) `Pesan Lu udah di terima ya babi!!`")
+    await apprvpm.edit(f"`Oke` [{name0}](tg://user?id={uid}) `Pesanmu sudah diterima ya!!`")
     await apprvpm.delete(getmsg)
     await message.delete()
 
@@ -286,12 +286,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(aname))
-        await block.edit(f"`Lu jamet, Maaf Gua block ya ngentot!`")
+        await block.edit(f"`Kamu jamet, Maaf aku block ya!`")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit(f"`Lu Jamet, Maaf Gua blok ya ngentot!!`")
+        await block.edit(f"`Kamu jamet, Maaf aku block ya!!`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
@@ -317,7 +317,7 @@ async def unblockpm(unblock):
         replied_user = await unblock.client.get_entity(reply.from_id)
         name0 = str(replied_user.first_name)
         await unblock.client(UnblockRequest(replied_user.id))
-        await unblock.edit("`Udah Di Unblock Jangan ngejamet lagi ya ngentot!`")
+        await unblock.edit("`Udah Di Unblock, Jangan ngejamet lagi ya!!`")
 
     if BOTLOG:
         await unblock.client.send_message(
