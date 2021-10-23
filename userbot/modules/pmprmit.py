@@ -31,7 +31,7 @@ DEF_UNAPPROVED_MSG = (
     f"**╭━━━━━━━━━━━━━━━━━╮**\n    🌟SELAMAT DATANG🌟\n"
     "**╰━━━━━━━━━━━━━━━━━╯**\n"
     "▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
-    f"**Halo, sabar ya, {DEFAULTUSER} lagi sibuk,\nApa ada yang bisa dibantu?\n,Gak usah spam chat ya, jangan kek jamet!!! \n, Tunggu {DEFAULTUSER} nerima pesanmu !**\n"
+    f"**Halo,{DEFAULTUSER} lagi sibuk, sabar ya,\nApa ada yang bisa dibantu? \nGak usah spam chat ya !!! \nTunggu {DEFAULTUSER} nerima pesanmu !**\n"
     "▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
     "╭✠╼━━━━━━❖━━━━━━━✠╮\n"
     "┣[• 𝐁𝐎𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄\n"
